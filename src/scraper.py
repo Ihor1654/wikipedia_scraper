@@ -89,7 +89,7 @@ class WikipediaScraper:
             case _:
                 return False
 
-    def refresh_cookie(self)-> self.cookie:
+    def refresh_cookie(self):
         """
             Method check state of cookie and refresh them if necessary
             :return: cookie
