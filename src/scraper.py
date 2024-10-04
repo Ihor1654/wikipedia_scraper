@@ -165,11 +165,13 @@ class WikipediaScraper:
         :param: AsyncClient session instance of httpx.AsyncClient
         :return: str first_paragraph short-bio paragraph of the wiki page
         """
-        try:
-            print(wikipedia_url)
-            response = await session.get(wikipedia_url)
-        except:
-            print(1)
+        while True:
+            try:
+                response = await session.get(wikipedia_url)
+                break
+            except Exception as e:
+                print(1)
+    
         soup = BeautifulSoup(response.content,features='html')
         paragraphs = soup.find_all('p')
         for paragraph in paragraphs:
