@@ -178,7 +178,7 @@ class WikipediaScraper:
             if re.search(r'\d{4}.*?\d{4}',str(paragraph)):
                 first_paragraph = str(paragraph)
                 break
-        patern_list = [re.compile(patern) for patern in [r'<sup class="reference" .*?>.*?</sup>', r'[(]<span .*?>.*?>[)]', r'<.*?>', r'.mw.*Écouter']]
+        patern_list = [re.compile(patern) for patern in [r'<sup class="reference" .*?>.*?</sup>', r'[(]<span .*?>.*?>[)]', r'<.*?>', r'.mw.*Écouter'],r'uitspraak.?']
         for patern in patern_list:
             first_paragraph = patern.sub('',first_paragraph)
         return first_paragraph
