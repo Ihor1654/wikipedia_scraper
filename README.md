@@ -5,8 +5,15 @@
 ## 🏢 Description
 
  In this project I create a scraper that builds a JSON file with the political leaders of each country I get from [this API](https://country-leaders.onrender.com/docs).
+ Include in this file the first paragraph of the Wikipedia page of these leaders. 
+ In this project, I used the asyncio module for asynchronous link processing, as well as BeautifulSoup for scraping data from HTML pages and regular expressions for data cleaning.
 
-Include in this file the first paragraph of the Wikipedia page of these leaders.
+
+
+
+
+
+
 
 
 ![wiki_logo](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Wikipedia-Logo-black-and-white.jpg/480px-Wikipedia-Logo-black-and-white.jpg)
